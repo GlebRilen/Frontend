@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    user-select: none;
+    overflow: hidden;
+}
+
+#canv {
+    width: 1024px;
+    height: 768px;
+
+    /* width: calc(100% - 30px);
+    height: calc(100% - 60px); */
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    display: block;
+    overflow: hidden;
+    border: black solid 1px;
+    
+}
+
+#loader{
+    position: absolute;
+    top: calc((100%/2) - 100px);
+    left: calc(((100%/2) - 100px));
+    display: none
+}
+.button{
+    width: 80px;
+    height: 30px;
+    top: 0;
+    /* color: rgb(28, 28, 28); */
+    color: #EBEBEB;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 10px;
+    text-align: center;
+    font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif';
+    font-size: 15px;  
+    
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    border: 0px solid #00000000;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 5px;
+}
+.button:hover {
+        background-color: #666666;
+        cursor: pointer;
+}
+.checked{
+    background-color: #666666;
+}
+#zoom li, #tf li {
+    width: 35px;
+    height: 24px;
+    top:0;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0; 
+    font-size: 15px;
+    line-height: 24px;
+    margin: 4px;
+    font-weight: bold;
+    position:relative;
+    margin: 0;
+    text-align: center;
+    vertical-align:middle;
+}
+li:hover{
+    background-color: #666666;
+    cursor: pointer;
+}
+
+
+.root{
+    width: calc(100% - 30px);
+    height: calc(100% - 80px);
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    left: 0px;
+    bottom: 30px;
+    display: block;
+    overflow: hidden;
+    border: black;
+    
+}
+.bar{
+    display: block;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.hr {
+    position:absolute;
+    top: 0;
+    display:inline-block;
+    width: 400px;
+    height: 30px;
+    margin-top: 13px; 
+}
+#tf{
+    position:absolute;
+    left: 15%;
+    color: #EBEBEB;
+    font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif';
+    font-size: 15px;  
+}
+#zoom{
+    display: block;
+    visibility: visible;
+    position: relative;
+    left: 40%;
+    width: 400px;
+    color: #EBEBEB;
+}
+#pattern{
+    display: block;
+    visibility: hidden;
+
+    position: absolute;
+    left: 500px;
+    top: 0;
+    margin: 10px;
+    width: 600px;
+    height: 30px;
+}
+#pattern li {
+    position:relative;
+    top: 3px;
+    display:inline;
+    margin: 8px; 
+    font-weight: bold;
+    border: 0px solid #EBEBEB;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 15px;   
+}
+.login{
+    position: absolute;
+    right: 20px;
+}
+#swap{
+    position: absolute;
+    right: 120px;
+}
+#fetch{
+    left: 75%;
+}
+#ticker{
+    position: absolute;
+    margin: 15px;
+}
+
+.priceScale{
+    /* float: right; */
+    /* background-color: black; */
+    width: 50px;
+    height: calc(100% - 100px);
+    position: absolute;
+    right: 0;
+    top:50px;
+    display: block;
+    border-left: solid 1px black;
+    background-color: white;
+}
+#timeScale{
+    position:absolute;
+    bottom: 0;
+    border-top: solid 1px black;
+    width: calc(100% - 100px);
+    left: 50px;
+    height: 50px;
+    background-color: white;
+}
+#tools{
+    /* float: right; */
+    /* background-color: black; */
+    width: 50px;
+    height: calc(100% - 50px);
+    position: absolute;
+    left: 0;
+    top:50px;
+    bottom: 0;
+    display: block;
+    border-right: solid 1px black;
+    background-color: white;
+    justify-content: center;
+}
+#list{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+}
+#listCrypto{
+    width: 100px;
+    height: calc(100% - 101px);
+    position: absolute;
+    display: block;
+    visibility: visible;
+    top: 50px;
+    left: 50px;
+    bottom: 50px;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
+    align-content: center;
+    background-color: #EBEBEB;
+}
+#binanceSpot{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #EBEBEB;
+}
+#Bybit{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #EBEBEB;
+}
+#OKXSpot{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    background-color: #EBEBEB;
+}
+#GateIO{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    background-color: #EBEBEB;
+}
+#searchCrypto{
+    display: block;
+    width: 86px;
+    left: 5px;
+    right: 5px;
+    top: 90px;
+    position: absolute;
+    background-color: #EBEBEB;
+}
+#ctyptoList{
+    width: 86px;
+    height: calc(100% - 125px);
+    position: absolute;
+    display: block;
+    visibility: visible;
+    top: 120px;
+    left: 5px;
+    right: 5px;
+    bottom: 100px;
+    /* border-right: solid 1px black; */
+    /* border-left: solid 1px black; */
+    /* border-bottom: solid 1px black; */
+    align-content: center;
+    background-color: #fa464600;
+    overflow: auto;
+    -ms-overflow-style: none;
+      scrollbar-width: none;
+}
+#ctyptoList::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.tickerCryptoList{
+    visibility: visible;
+}
+#ctyptoList li{
+    display: block;
+    width: 80px !important;
+    font-family: sans-serif;
+
+    font-weight: bold;
+    
+    height: 20px;
+    top:0;
+    display: inline-block; /* Отображать как строчный элемент */
+    border-radius: 5px;
+    padding: 0; /* Поля вокруг текста */
+    font-size: 15px;
+    line-height: 24px;
+    margin: 40px;
+    position:relative;
+    margin: 0;
+    text-align: left;
+}
+
+
+
+#ugol{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    background-color: white;
+    right: 0;
+    bottom: 0;
+}
+#navbar{
+
+    line-height: 50%;
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-color: rgb(90, 230, 230);
+    /* background: rgb(80, 200, 80); */
+
+    background: #303030;
+    padding: 0px;
+    margin: 0;
+    /* border-radius: 5px; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.deltaText{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+
+
+
+

@@ -1,0 +1,17 @@
+{
+  "proxy": "http://localhost:5000",
+  "name": "canvas",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "ws": "^8.15.1"
+  }
+}
